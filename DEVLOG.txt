@@ -1,0 +1,5 @@
+DEVLOG
+
+25/08/2017 - 2:55 - Justin
+Added "STATIC_ROOT = ''" to end of settings.py in project. Only way to get bg image to display while debugging.
+Will probably have issues at launch if this is not removed.
