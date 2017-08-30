@@ -16,7 +16,7 @@ class UserType(models.Model):
         return self.typeName
 
 class UserInfo(models.Model):
-    userID = models.IntegerField()
+    userID = models.AutoField(primary_key=True)
     userTypeID = models.ForeignKey(UserType, on_delete=models.CASCADE)
     username = models.CharField(max_length=50)
     password = models.CharField(max_length=30)
@@ -28,5 +28,5 @@ class UserInfo(models.Model):
     address = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.userID
+        return str(self.userID)
 
