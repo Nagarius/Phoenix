@@ -12,6 +12,8 @@ class UserType(models.Model):
     #    ('S', 'Student'),
     #    ('A', 'Administrator'),
     #)
+    def __str__(self):
+        return self.typeName
 
 class UserInfo(models.Model):
     userID = models.IntegerField()
@@ -24,4 +26,7 @@ class UserInfo(models.Model):
     email = models.CharField(max_length=50)
     contactNumber = models.IntegerField()
     address = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.userID
 
