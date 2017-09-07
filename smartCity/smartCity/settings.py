@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'login',
+    'accounts',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,7 +55,8 @@ ROOT_URLCONF = 'smartCity.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/smartcity/templates',
+                 os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/accounts/templates/registration',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -127,3 +128,5 @@ STATIC_URL = '/static/'
 #Below is added for debugging. This changes the static directory to allow images to display in CSS. DEVELOPMENT ONLY
 
 STATIC_ROOT = ''
+
+

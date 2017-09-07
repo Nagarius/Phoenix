@@ -6,4 +6,5 @@ from django.conf.urls import url
 
 
 def index(request):
-    return HttpResponse("<a href=/login>Click here to login</a>")
+
+    return render(request, 'welcome.html', {})
