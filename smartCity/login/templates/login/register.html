@@ -1,0 +1,121 @@
+
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>Smart City Register</title>
+		
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="setup.css">
+		
+<style>
+body {
+	margin: 0;
+	padding: 0;
+	background-attachment: fixed;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+a {
+	text-decoration: underline;
+}
+a:hover {
+	text-decoration: none;
+}
+
+.body {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 40px;
+	background-image: url("bg1.jpg");
+	background-size: cover;
+	z-index: 0;
+}
+
+@media screen and (max-width: 600px) {
+	.body {
+		padding: 20px;
+	}
+}
+</style>
+
+	</head>
+	<body class="body">
+			<form action="" class="signup-form">
+				<header>Registration form</header>
+				
+				<fieldset>					
+					<section>
+						<label class="input">
+							<input type="text" placeholder="Username">
+							<b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
+						</label>
+					</section>
+					
+					<section>
+						<label class="input">
+							<input type="text" placeholder="Email address">
+							<b class="tooltip tooltip-bottom-right">Needed to verify your account</b>
+						</label>
+					</section>
+					
+					<section>
+						<label class="input">
+							<input type="password" placeholder="Password">
+							<b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
+						</label>
+					</section>
+					
+					<section>
+						<label class="input">
+							<input type="password" placeholder="Confirm password">
+							<b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
+						</label>
+					</section>
+				</fieldset>
+					
+				<fieldset>
+					<div class="row">
+						<section class="col col-6">
+							<label class="input">
+								<input type="text" placeholder="First name">
+							</label>
+						</section>
+						<section class="col col-6">
+							<label class="input">
+								<input type="text" placeholder="Last name">
+							</label>
+						</section>
+					</div>
+					<section>
+						<label class="input">
+							<input type="text" placeholder="Phone">
+						</label>
+					</section>
+					<section>
+						<label class="input">
+							<input type="text" placeholder="Address">
+						</label>
+					</section>
+					
+					<section>
+						<label class="select">
+							<select>
+								<option value="0" selected disabled>Type</option>
+								<option value="1">Business Man</option>
+								<option value="2">Student</option>
+								<option value="3">Tourist</option>
+							</select>
+							<i></i>
+						</label>
+					</section>
+					<!-- <section>
+						<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>I agree to the Terms of Service</label>
+						<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>I want to receive news and  special offers</label>
+					</section> -->
+				</fieldset>
+				<footer>
+					<button type="submit" class="button">Submit</button>
+				</footer>
+			</form>
+	</body>
+</html>
