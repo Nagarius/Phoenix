@@ -6,7 +6,7 @@
 		
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="setup.css">
-		
+		{% load static %}
 <style>
 body {
 	margin: 0;
@@ -26,7 +26,7 @@ a:hover {
 	max-width: 600px;
 	margin: 0 auto;
 	padding: 40px;
-	background-image: url("bg1.jpg");
+	background-image: url("{% static "global/bg1.jpg" %}"");
 	background-size: cover;
 	z-index: 0;
 }

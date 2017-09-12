@@ -127,6 +127,10 @@ STATIC_URL = '/static/'
 
 #Below is added for debugging. This changes the static directory to allow images to display in CSS. DEVELOPMENT ONLY
 
-STATIC_ROOT = ''
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 

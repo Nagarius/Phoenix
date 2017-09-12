@@ -5,10 +5,17 @@ from django.dispatch import receiver
 
 # Create your models here.
 
-
+# Models listed below based on Dennis' database design. Have excluded some information from
+# UserInfo as this information is already present in the default users table.
 class UserType(models.Model):
     typeName = models.CharField(max_length=45)
     typeDesc = models.TextField()
+
+    def __str__(self):
+        return str(self.typeName)
+
+    def __unicode__(self):
+        return smart_unicode(self.typeName)
 
 
 class City(models.Model):
@@ -30,20 +37,8 @@ class DataType(models.Model):
 
 
 class UserInfo(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    userTypeID = models.ForeignKey(UserType)
-    dob = models.DateField()
-    contactNumber = models.IntegerField()
-    address = models.CharField(max_length=50)
-
-@receiver(post_save, sender=User)
-def create_user_profile(sender, instance, created, **kwargs):
-    if created:
-        UserInfo.objects.create(user=instance)
-
-@receiver(post_save, sender=User)
-def save_user_profile(sender, instance, **kwargs):
-    instance.userinfo.save()
-
-    def __str__(self):
-        return str(self.address)
+    user = models.OneToOneField(User, related_name='profile')
+    userTypeID = models.ForeignKey(UserType, on_delete=models.CASCADE)
+    dob = models.DateField(default='2016-01-01')
+    contactNumber = models.IntegerField(default=2, blank=True)
+    address = models.CharField(max_length=50, default='', blank=True)
