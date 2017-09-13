@@ -6,4 +6,6 @@ from django.conf.urls import url
 
 
 def index(request):
-    return HttpResponse("<a href=/login>Click here to login</a>")
+    if request.user.is_authenticated():
+        return HttpResponse("Already logged in mate<p> <a href='/accounts/logout'> Logout?</a>")
+    return render(request, 'welcome.html', {})
