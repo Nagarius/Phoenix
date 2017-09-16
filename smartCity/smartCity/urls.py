@@ -20,11 +20,8 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.index),
-<<<<<<< HEAD
     url(r'^login/', auth_views.login, name='login'),
     url(r'^logout/', auth_views.login, name='logout'),
-=======
     url(r'^accounts/', include('accounts.urls')),
->>>>>>> d89834b8da20054f16181753d1a69dda69567dfc
     url(r'^admin/', admin.site.urls),
 ]
