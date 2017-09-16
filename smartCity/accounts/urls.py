@@ -1,5 +1,6 @@
 from django.conf.urls import url
 from . import views
+from smartCity import views as smartViews
 from django.contrib.auth import views as auth_views #as authviews to reference elsewhere
 
 
