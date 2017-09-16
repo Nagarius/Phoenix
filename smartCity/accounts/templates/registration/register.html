@@ -72,6 +72,8 @@ a:hover {
 				</tbody>
 
 			  	</table>
+				{{ formUser.errors.as_text }}<p>
+				{{ formInfO.errors.as_text }}<p>
 				<button type="submit" class="button">Submit</button>
 				{{ success }}
 
