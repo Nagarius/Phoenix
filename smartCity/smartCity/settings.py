@@ -80,8 +80,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'smart_city',
         'USER': 'root',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',  # Or an IP Address that your DB is hosted on
+        'PASSWORD': 'password123',
+        'HOST': '49.176.68.254',  # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }
 }
