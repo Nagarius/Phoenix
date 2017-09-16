@@ -78,6 +78,10 @@ WSGI_APPLICATION = 'smartCity.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'SMART_CITY',
+        'USER': 'root',
+        'PASSWORD': 'password123',
+        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
         'NAME': 'smart_city',
         'USER': 'root',
         'PASSWORD': 'password123',
