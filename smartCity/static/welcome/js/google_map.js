@@ -36,7 +36,7 @@ function init() {
             new google.maps.Marker({
                 position: latlng,
                 map: map,
-                icon: {% static 'welcome/images/loc.png' %}
+                icon: {% static '/welcome/images/loc.png' %}
             });
 
         });
