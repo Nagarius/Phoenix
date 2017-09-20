@@ -1,0 +1,382 @@
+
+<!DOCTYPE html>
+
+	<head>
+	{% load static %}
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>SmartCity</title>
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{% static "welcome/css/animate.css" %}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{% static "welcome/css/icomoon.css" %}">
+	<!-- Simple Line Icons -->
+	<link rel="stylesheet" href="{% static "welcome/css/simple-line-icons.css" %}">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="{% static "welcome/css/magnific-popup.css" %}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{% static "welcome/css/bootstrap.css" %}">
+
+	<link rel="stylesheet" href="{% static "welcome/css/style.css" %}">
+	<!-- Modernizr JS -->
+	<script src="{% static "welcome/js/modernizr-2.6.2.min.js" %}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+
+
+	<script src="{% static "welcome/js/respond.min.js" %}"></script>
+	<!--[endif]-->
+
+	</head>
+	<body>
+	<header role="banner" id="fh5co-header">
+			<div class="container">
+				<!-- <div class="row"> -->
+			    <nav class="navbar navbar-default">
+		        <div class="navbar-header">
+		        	<!-- Mobile Toggle Menu Button -->
+					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+		         <a class="navbar-brand" href="/">SmartCity</a>
+		        </div>
+		        <div id="navbar" class="navbar-collapse collapse">
+		          <ul class="nav navbar-nav navbar-right">
+		            <li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
+		            <li><a href="#" data-nav-section="work"><span>Function</span></a></li>
+		            <li><a href="#" data-nav-section="about"><span>About</span></a></li>
+		            <li><a href="#" data-nav-section="contact"><span>Contact</span></a></li>
+		          </ul>
+		        </div>
+			    </nav>
+			  <!-- </div> -->
+		  </div>
+	</header>
+
+	<section id="fh5co-home" data-section="home" style="background-image: url("{% static "welcome/images/bg1.jpg" %}");" data-stellar-background-ratio="0.5">
+		<div class="gradient"></div>
+		<div class="container">
+			<div class="text-wrap">
+				<div class="text-inner">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2">
+							<h1 class="to-animate">Welcome to SmartCity</h1>
+							<h2 class="to-animate">A smart city is a system gathers information. These include local departments' information systems, schools, libraries, hotel, industries and other community services. A smart city is promoted to use city informatics and technology to make citizens easier to get the information of all.</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slant"></div>
+	</section>
+
+	<section id="fh5co-work" data-section="work">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">Function</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 subtext to-animate">
+							<h3>The Information of the City</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row row-bottom-padded-sm">
+				<div class="col-md-4 col-sm-6 col-xxs-12">
+					<a href="{% static "welcome/images/work_1.jpg" %}" class="fh5co-project-item image-popup to-animate">
+						<img src="{% static "welcome/images/work_1.jpg" %}" alt="Image" class="img-responsive">
+						<div class="fh5co-text">
+						<h2>Colleges</h2>
+						<span>Students</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xxs-12">
+					<a href="{% static "welcome/images/work_2.jpg" %}" class="fh5co-project-item image-popup to-animate">
+						<img src="{% static "welcome/images/work_2.jpg" %}" alt="Image" class="img-responsive">
+						<div class="fh5co-text">
+						<h2>Libraries</h2>
+						<span>Students</span>
+						</div>
+					</a>
+				</div>
+
+				<div class="clearfix visible-sm-block"></div>
+
+				<div class="col-md-4 col-sm-6 col-xxs-12">
+					<a href="{% static "welcome/images/work_3.jpg" %}" class="fh5co-project-item image-popup to-animate">
+						<img src="{% static "welcome/images/work_3.jpg" %}" alt="Image" class="img-responsive">
+						<div class="fh5co-text">
+						<h2>Industries</h2>
+						<span>Business</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xxs-12">
+					<a href="{% static "welcome/images/work_4.jpg" %}" class="fh5co-project-item image-popup to-animate">
+						<img src="{% static "welcome/images/work_4.jpg" %}" alt="Image" class="img-responsive">
+						<div class="fh5co-text">
+						<h2>Hotel</h2>
+						<span>Business/Tourists</span>
+						</div>
+					</a>
+				</div>
+				
+				<div class="clearfix visible-sm-block"></div>
+
+				<div class="col-md-4 col-sm-6 col-xxs-12">
+					<a href="{% static "welcome/images/work_5.jpg" %}" class="fh5co-project-item image-popup to-animate">
+						<img src="{% static "welcome/images/work_5.jpg" %}" alt="Image" class="img-responsive">
+						<div class="fh5co-text">
+						<h2>Parks</h2>
+						<span>City Info</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xxs-12">
+					<a href="{% static "welcome/images/work_6.jpg" %}" class="fh5co-project-item image-popup to-animate">
+						<img src="{% static "welcome/images/work_6.jpg" %}" alt="Image" class="img-responsive">
+						<div class="fh5co-text">
+						<h2>Zoo</h2>
+						<span>City Info</span>
+						</div>
+					</a>
+				</div>
+				
+				<div class="clearfix visible-sm-block"></div>
+
+				<div class="col-md-4 col-sm-6 col-xxs-12">
+					<a href="{% static "welcome/images/work_7.jpg" %}" class="fh5co-project-item image-popup to-animate">
+						<img src="{% static "welcome/images/work_7.jpg" %}" alt="Image" class="img-responsive">
+						<div class="fh5co-text">
+						<h2>Meseums</h2>
+						<span>City Info</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xxs-12">
+					<a href="{% static "welcome/images/work_8.jpg" %}" class="fh5co-project-item image-popup to-animate">
+						<img src="{% static "welcome/images/work_8.jpg" %}" alt="Image" class="img-responsive">
+						<div class="fh5co-text">
+						<h2>Restaurants</h2>
+						<span>City Info</span>
+						</div>
+					</a>
+				</div>
+
+				<div class="clearfix visible-sm-block"></div>
+
+				<div class="col-md-4 col-sm-6 col-xxs-12">
+					<a href="{% static "welcome/images/work_1.jpg" %}" class="fh5co-project-item image-popup to-animate">
+						<img src="{% static "welcome/images/work_1.jpg" %}" alt="Image" class="img-responsive">
+						<div class="fh5co-text">
+						<h2>Mall</h2>
+						<span>City Info</span>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center to-animate">
+					<p>Enjoy the Smart City</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="fh5co-about" data-section="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">About</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 subtext to-animate">
+							<h3>Pheonix Team Member</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="{% static "welcome/images/person1.jpg" %}" alt="Image"></figure>
+						<h3>Jeffrey</h3>
+						<span class="fh5co-position">Developer</span>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
+						<ul class="social social-circle">
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="{% static "welcome/images/person2.jpg" %}" alt="Image"></figure>
+						<h3>Justin</h3>
+						<span class="fh5co-position">Developer</span>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
+						<ul class="social social-circle">
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-github"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="{% static "welcome/images/person3.jpg" %}" alt="Image"></figure>
+						<h3>Dennis</h3>
+						<span class="fh5co-position">Developer</span>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
+						<ul class="social social-circle">
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			</br>
+			</br>
+			
+			<div class="row">
+				<div class="col-md-4">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="{% static "welcome/images/person1.jpg" %}" alt="Image"></figure>
+						<h3>Kevin</h3>
+						<span class="fh5co-position">Scrum Master</span>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
+						<ul class="social social-circle">
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img src="{% static "welcome/images/person2.jpg" %}" alt="Image"></figure>
+						<h3>Andy</h3>
+						<span class="fh5co-position">Client</span>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
+						<ul class="social social-circle">
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-github"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section id="fh5co-contact" data-section="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">Get In Touch</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 subtext to-animate">
+							<h3>If you have any problem, you can just feedback to the admin using the form.</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row row-bottom-padded-md">
+				<div class="col-md-6 to-animate">
+					<h3>Contact Info</h3>
+					<ul class="fh5co-contact-info">
+						<li class="fh5co-contact-address ">
+							<i class="icon-home"></i>
+							2 George St, Brisbane City QLD 4000
+						</li>
+						<li><i class="icon-phone"></i> 0423926543</li>
+						<li><i class="icon-envelope"></i>imjeffrey01@gmail.com</li>
+						<li><i class="icon-globe"></i> <a href="https://www.facebook.com/jeffreyteo0528" target="_blank">Jeffrey</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-6 to-animate">
+					<h3>Contact Form</h3>
+					<div class="form-group ">
+						<label for="name" class="sr-only">Name</label>
+						<input id="name" class="form-control" placeholder="Name" type="text">
+					</div>
+					<div class="form-group ">
+						<label for="email" class="sr-only">Email</label>
+						<input id="email" class="form-control" placeholder="Email" type="email">
+					</div>
+					<div class="form-group ">
+						<label for="phone" class="sr-only">Phone</label>
+						<input id="phone" class="form-control" placeholder="Phone" type="text">
+					</div>
+					<div class="form-group ">
+						<label for="message" class="sr-only">Message</label>
+						<textarea name="" id="message" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
+					</div>
+					<div class="form-group ">
+						<input class="btn btn-primary btn-lg" value="Send Message" type="submit">
+					</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div id="map" class="to-animate"></div>
+	</section>
+	
+	
+	<footer id="footer" role="contentinfo">
+		<a href="#" class="gotop js-gotop"><i class="icon-arrow-up2"></i></a>
+		<div class="container">
+			<div class="">
+				<div class="col-md-12 text-center">
+					<p>IFB299 Project <br>Created by <a href="#" target="_blank">Team Pheonix</a></p>
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<ul class="social social-circle">
+						<li><a href="#"><i class="icon-twitter"></i></a></li>
+						<li><a href="#"><i class="icon-facebook"></i></a></li>
+						<li><a href="#"><i class="icon-youtube"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- jQuery -->
+	<script src="{% static "welcome/js/jquery.min.js" %}"></script>
+	<!-- jQuery Easing -->
+	<script src="{% static "welcome/js/jquery.easing.1.3.js" %}"></script>
+	<!-- Bootstrap -->
+	<script src="{% static "welcome/js/bootstrap.min.js" %}"></script>
+	<!-- Waypoints -->
+	<script src="{% static "welcome/js/jquery.waypoints.min.js" %}"></script>
+	<!-- Stellar Parallax -->
+	<script src="{% static "welcome/js/jquery.stellar.min.js" %}"></script>
+	<!-- Counter -->
+	<script src="{% static "welcome/js/jquery.countTo.js" %}"></script>
+	<!-- Magnific Popup -->
+	<script src="{% static "welcome/js/jquery.magnific-popup.min.js" %}"></script>
+	<script src="{% static "welcome/js/magnific-popup-options.js" %}"></script>
+	<!-- Google Map -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
+	<script src="{% static "welcome/js/google_map.js" %}"></script>
+
+
+	<!-- Main JS (Do not remove) -->
+	<script src="{% static "welcome/js/main.js" %}"></script>
+
+	</body>
+</html>
+

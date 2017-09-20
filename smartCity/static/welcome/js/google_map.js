@@ -1,4 +1,3 @@
-{% load static %}
 var google;
 
 function init() {
@@ -35,8 +34,7 @@ function init() {
             var latlng = new google.maps.LatLng(p.lat, p.lng);
             new google.maps.Marker({
                 position: latlng,
-                map: map,
-                icon: {% static '/welcome/images/loc.png' %}
+                map: map
             });
 
         });
