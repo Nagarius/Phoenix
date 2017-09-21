@@ -4,88 +4,108 @@
 		<title>Smart City Register</title>
 		{% load static %}
 		<meta charset="utf-8">
-		<link rel="stylesheet" href=""{% static "login/bg1.jpg" %}"">
 
 
-<style>
-body {
-	margin: 0;
-	padding: 0;
-	background-attachment: fixed;
-	background-position: 50% 50%;
-	background-size: cover;
-}
+	<style>
+	body {
+		margin: 0;
+		padding: 0;
+		background-attachment: fixed;
+		background-position: 50% 50%;
+		background-size: cover;
+	}
 
-header {
-	float: left;
-	color: #fff;
-	font-family: 'Exo', sans-serif;
-	font-size: 35px;
-	font-weight: 200;
-}
+	header {
+		float: left;
+		color: #fff;
+		font-family: 'Exo', sans-serif;
+		font-size: 35px;
+		font-weight: 200;
+	}
 
-a {
-	text-decoration: underline;
-}
-a:hover {
-	text-decoration: none;
-}
-.body {
-	max-width: 1000px;
-	margin: 0 auto;
-	padding: 40px;
+	a {
+		text-decoration: underline;
+	}
+	a:hover {
+		text-decoration: none;
+	}
+
+	.body{
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
 	background-image: url("{% static "global/bg1.jpg" %}");
 	background-size: cover;
+	-webkit-filter: blur(5px);
 	z-index: 0;
-}
-
-.signup-form {
-	position: absolute;
-	left: calc(50% - 150px);
-	height: 150px;
-	width: 350px;
-	padding: 10px;
-	z-index: 2;
-}
-
-input, select {
-    width: 250px;
-    height: 30px;
-    background: white;
-    border: 1px solid rgba(255,255,255,0.6);
-    border-radius: 2px;
-    color: black;
-    font-family: 'Exo', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    padding: 4px;
-}
-
-button {
-	width: 260px;
-	height: 35px;
-	background: #fff;
-	border: 1px solid #fff;
-	cursor: pointer;
-	border-radius: 2px;
-	color: #a18d6c;
-	font-family: 'Exo', sans-serif;
-	font-size: 16px;
-	font-weight: 400;
-	padding: 6px;
-	margin-top: 10px;
-	margin-left: 8px;
-}
-
-@media screen and (max-width: 600px) {
-	.body {
-		padding: 20px;
 	}
-}
-</style>
+
+	.signup-form {
+		position: absolute;
+		left: calc(50% - 150px);
+		height: 150px;
+		width: 350px;
+		padding: 10px;
+		z-index: 2;
+	}
+
+	input, select {
+		width: 250px;
+		height: 30px;
+		background: white;
+		border: 1px solid rgba(255,255,255,0.6);
+		border-radius: 2px;
+		color: black;
+		font-family: 'Exo', sans-serif;
+		font-size: 16px;
+		font-weight: 400;
+		padding: 4px;
+	}
+
+	button {
+		width: 260px;
+		height: 35px;
+		background: #fff;
+		border: 1px solid #fff;
+		cursor: pointer;
+		border-radius: 2px;
+		color: #a18d6c;
+		font-family: 'Exo', sans-serif;
+		font-size: 16px;
+		font-weight: 400;
+		padding: 6px;
+		margin-top: 10px;
+		margin-left: 8px;
+	}
+
+	@media screen and (max-width: 600px) {
+		.body {
+			padding: 20px;
+		}
+	}
+
+	.grad{
+		position: absolute;
+		top: -20px;
+		left: -20px;
+		right: -40px;
+		bottom: -40px;
+		width: auto;
+		height: auto;
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+		z-index: 1;
+		opacity: 0.7;
+	}
+	</style>
 
 	</head>
-	<body class="body">
+	<body>
+	<div class="body"></div>
+	<div class="grad"></div>
 		<form method="POST" action="" class="signup-form">{% csrf_token %}
 
 			<header>Registration form</header>
