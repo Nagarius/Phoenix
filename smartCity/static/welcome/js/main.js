@@ -272,7 +272,7 @@
 
 		burgerMenu();
 
-		clickMenu();
+		//clickMenu();
 
 		windowScroll();
 
