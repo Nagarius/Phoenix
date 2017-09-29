@@ -112,23 +112,21 @@
 			<table >
 			{% for field in formUser %}
 				<tbody>
-					<tr>
-						<td>
-							<label for="{{ field.label }}" style="display:inline-block;vertical-align:middle">{{ field.label_tag }}</label>
-						</td>
-						<td>
-							{{ field }}
-						</td>
+					<tr for="{{ field.label }}">
+                        <td>
+                            {{ field.label_tag }}
+                        </td>
+                        <td>
+                            {{ field }}
+                        </td>
 					</tr>
 				{% endfor %}
-				</tbody>
-				</table>
-				<table >
-				{% for field in formInfo %}
+
+                {% for field in formInfo %}
 					<tbody>
-						<tr>
+						<tr for="{{ field.label }}">
 							<td>
-								<label for="{{ field.label }}" style="display:inline-block;vertical-align:middle">{{ field.label_tag }}</label>
+								{{ field.label_tag }}
 							</td>
 							<td>
 								{{ field }}
@@ -136,7 +134,6 @@
 						</tr>
 				{% endfor %}
 				</tbody>
-
 			</table>
 			{{ formUser.errors.as_text }}<p>
 			{{ formInfO.errors.as_text }}<p>
