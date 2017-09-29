@@ -99,3 +99,5 @@ ENV/
 
 # mypy
 .mypy_cache/
+smartCity/smartCity/templates/main.html
+smartCity/smartCity/settings.py
