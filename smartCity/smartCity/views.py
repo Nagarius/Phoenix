@@ -6,7 +6,9 @@ from django.conf.urls import url
 
 
 def index(request):
-    if request.user.is_authenticated():
+    if request.user.is_superuser:
+        return redirect('/admin')
+    elif request.user.is_authenticated():
         #return render(request, "main.html", {})
-        return redirect('accounts/profile')
+        return render(request, 'main.html', {})
     return render(request, 'index.html', {})

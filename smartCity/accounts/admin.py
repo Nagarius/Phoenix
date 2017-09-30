@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import User
-from .models import UserInfo, UserType, City
+from .models import UserInfo, UserType, City, DataType, CityInfo
 
 # Register your models here.
 
@@ -20,6 +20,8 @@ class UserAdmin(UserAdmin):
 # Adds userType and City tables to admin page.
 admin.site.register(UserType)
 admin.site.register(City)
+admin.site.register(CityInfo)
+admin.site.register(DataType)
 
 # Deloads the default user table and reloads the custom one.
 admin.site.unregister(User)

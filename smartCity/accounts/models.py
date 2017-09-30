@@ -22,12 +22,18 @@ class City(models.Model):
     cityName = models.CharField(max_length=45)
     cityDesc = models.TextField()
 
+    def __str__(self):
+        return str(self.cityName)
+
 
 class CityInfo(models.Model):
     cityID = models.ForeignKey(City)
     userTypeID = models.ForeignKey(UserType)
     cityInfoName = models.CharField(max_length=45)
     cityInfoDesc = models.TextField()
+
+    def __str__(self):
+        return str(self.cityID)
 
 
 class DataType(models.Model):
