@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from .forms import RegisterFormInfo, UserCreateForm
+from django.contrib.auth import authenticate, login
+from django.contrib import messages
 from django.contrib.auth.models import User
 
 # Create your views here.
@@ -18,28 +20,8 @@ def account_page(request):
 # database.
 def register(request):
 
-    # String to print on success of creation
-    success = ""
-
-    # Dictionaries for prepopulated field data:
-    formUserDic = {
-        'username': 'Username',
-        'email': 'Email',
-        'first_name': 'First Name',
-        'last_name': 'Last Name',
-        'password1': 'Password',
-        'password2': 'Confirm Password'
-
-    }
-    formInfoDic = {
-        'dob': 'DOB',
-        'contactNumber': '0364278173',
-        'address': 'Address',
-        'userTypeID': 'PLEASE SELECT'
-    }
-
-    formUser = UserCreateForm(request.POST or None, initial= formUserDic)
-    formInfo = RegisterFormInfo(request.POST or None, initial= formInfoDic)
+    formUser = UserCreateForm(request.POST or None)
+    formInfo = RegisterFormInfo(request.POST or None)
     print(formUser.errors)
 
     if formUser.is_valid() and formInfo.is_valid():
@@ -51,13 +33,17 @@ def register(request):
         # respective User primary key. Basically, it insures they are linked.
         instance.user_id = temp_user.pk
         instance.save()
-        success = "Success!!!"
+        messages.success(request, "Thanks for registering, you are now logged in.")
+        new_user = authenticate(username=formUser.cleaned_data['username'],
+                                password=formUser.cleaned_data['password1'],
+                                )
+        login(request, new_user)
+        return HttpResponseRedirect("/")
 
 
     context = {
         "formInfo": formInfo,
         "formUser": formUser,
-        "success": success
     }
 
     return render(request, 'register.html', context)

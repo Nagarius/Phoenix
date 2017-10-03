@@ -45,6 +45,6 @@ class DataType(models.Model):
 class UserInfo(models.Model):
     user = models.OneToOneField(User, related_name='profile')
     userTypeID = models.ForeignKey(UserType, on_delete=models.CASCADE)
-    dob = models.DateField(default='2016-01-01')
+    dob = models.DateField(null=True, blank=True, default='2016-01-01')
     contactNumber = models.IntegerField(default=2, blank=True)
     address = models.CharField(max_length=50, default='', blank=True)
