@@ -9,7 +9,7 @@ from django.contrib.auth.forms import UserCreationForm
 
 # Defines a new form for the UserInfo table inheriting from the ModelForm class.
 class RegisterFormInfo(forms.ModelForm):
-    dob = forms.DateField(required=True, label='Date of birth')
+    dob = forms.DateField(required=False, label='Date of birth')
     contactNumber = forms.IntegerField(required=True, label='Contact Number')
     address = forms.CharField(required=True, label='Address')
     userTypeID = ModelChoiceField(queryset=UserType.objects, label='User Type')

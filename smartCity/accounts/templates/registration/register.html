@@ -135,10 +135,9 @@
 				{% endfor %}
 				</tbody>
 			</table>
-			{{ formUser.errors.as_text }}<p>
-			{{ formInfO.errors.as_text }}<p>
+			<mark>{{ formUser.errors.as_text }}<p>
+				{{ formInfO.errors.as_text }}<p></mark>
 			<button type="submit" class="button">Submit</button>
-			{{ success }}
 		</form>
 	</body>
 </html>
