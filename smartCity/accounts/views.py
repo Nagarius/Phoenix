@@ -33,7 +33,7 @@ def register(request):
         # respective User primary key. Basically, it insures they are linked.
         instance.user_id = temp_user.pk
         instance.save()
-        messages.success(request, "Thanks for registering, you are now logged in.")
+        messages.success(request, "Thanks for registering " + temp_user.username + ", you are now logged in.")
         new_user = authenticate(username=formUser.cleaned_data['username'],
                                 password=formUser.cleaned_data['password1'],
                                 )
