@@ -27,12 +27,12 @@ class UserCreateForm(UserCreationForm):
     first_name = forms.CharField(required=True, label='First Name')
     last_name = forms.CharField(required=True, label='Last Name')
     password1 = forms.CharField(required=True, label='Password', widget=forms.PasswordInput)
-    password2 = forms.CharField(required=True, label='Password Conformation', widget=forms.PasswordInput)
+    password2 = forms.CharField(required=True, label='Password Confirmation', widget=forms.PasswordInput)
 
     # Specifies the model to use and the fields from that model to include
     class Meta:
         model = User
-        fields =("username", "email", "first_name", "last_name", "password1", "password2")
+        fields = ("username", "email", "first_name", "last_name", "password1", "password2")
 
     # This overrides the built in save function of this class. It gets the 'cleaned' email data
     # as is built into Django and then saves the form.
