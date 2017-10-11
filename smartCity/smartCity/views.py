@@ -13,8 +13,8 @@ def index(request):
     elif request.user.is_authenticated():
         curUserPK = request.user.pk
         curUser = models.UserInfo.objects.get(user_id=curUserPK)
-        curUserType = curUser.userTypeID
-
+        curUserType = curUser.userTypeID.pk
+        print(curUserType)
 
         context = {
             "curUserType": curUserType
