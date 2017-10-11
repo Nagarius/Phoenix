@@ -50,7 +50,6 @@ def register(request):
 
 # This is the function that is called upon a successful login.
 def login_success(request):
-    # Placeholder
-    #return HttpResponse('Well done!<p>Here is where there will be a profile page? Anyway, you can see the main screen now<p><a href="../../">Here</a><p><a href="../logout">Logout?</a>')
+    #
     if request.user.is_authenticated():
         return redirect('../../')
