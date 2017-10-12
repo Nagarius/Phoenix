@@ -14,10 +14,11 @@ def index(request):
         curUserPK = request.user.pk
         curUser = models.UserInfo.objects.get(user_id=curUserPK)
         curUserType = curUser.userTypeID.pk
-        print(curUserType)
+        firstName = request.user.first_name
 
         context = {
-            "curUserType": curUserType
+            "curUserType": curUserType,
+            "firstName": firstName
         }
 
         return render(request, 'main.html', context)
