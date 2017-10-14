@@ -1,12 +1,35 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpRequest
 from django.conf.urls import url
 from accounts import models
 
 # Create your views here.
 
+searchTerm = ''
+
+def searchResults(request):
+
+    # Perhaps it would be better to check the search against a dictionary here before passing it to render. That way,
+    # can determine what to render and have another page for a fail or something.
+
+    context = {
+        "searchTerm": request.session['searchTerm'],
+    }
+
+    return render(request, 'searchResults.html', context)
+
 
 def index(request):
+
+    #This section of code checks for a post method and then saves the search term to be used in the serach results page
+
+    if request.method == 'POST':
+
+        #Session is a way of storing values to pass from one function to another. This avoids the problem of the script continually executing
+        #and overriding values that we wish to store
+
+        request.session['searchTerm'] = request.POST['search']
+        return redirect('/results')
 
     if request.user.is_superuser:
         return redirect('/admin')

@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^$', views.index),
     url(r'^accounts/', include('accounts.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^results/', views.searchResults),
 ]
