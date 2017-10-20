@@ -19,8 +19,19 @@ class UserType(models.Model):
 
 
 class City(models.Model):
-    cityName = models.CharField(max_length=45)
+    cityName = models.CharField(max_length=45, unique=True)
     cityDesc = models.TextField()
+    restaurantsLink = models.URLField(default="")
+    collegesLink = models.URLField(default="")
+    librariesLink = models.URLField(default="")
+    librariesLink = models.URLField(default="")
+    industriesLink = models.URLField(default="")
+    hotelsLink = models.URLField(default="")
+    parksLink = models.URLField(default="")
+    zoosLink = models.URLField(default="")
+    museumsLink = models.URLField(default="")
+    mallsLink = models.URLField(default="")
+
 
     def __str__(self):
         return str(self.cityName)
