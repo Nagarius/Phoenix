@@ -22,6 +22,7 @@ def searchResults(request):
         if word in str.lower(searchTerm):
 
             context = {
+                "links": request.session['links'],
                 "searchTerm": word,
             }
 
@@ -66,7 +67,7 @@ def index(request):
             "museums": curCity.museumsLink,
             "malls": curCity.mallsLink
         }
-
+        request.session['links'] = links
         curCityName = curCity.cityName
 
         # Based on the user type, this dictates what is displayed and what is not in this order:
