@@ -47,9 +47,9 @@
 				<!--Here is the dropbox that will need tidying up-->
 		<form method="POST">{% csrf_token %}
 			<select name="item_id" onchange="this.form.submit()">
-				<option disabled selected value> -- select an option -- </option>
 				{% for entry in dropdownItems %}
-					<option value="{{ entry }}">{{ entry }}</option>
+
+					<option {% if entry == curCityName %} selected="selected" {% endif %} value="{{ entry }}">{{ entry }}</option>
 				{% endfor %}
 			</select>
 		</form>

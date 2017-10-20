@@ -37,7 +37,6 @@ def index(request):
             for city in models.City.objects.all().values_list('cityName', flat=True):
                 if request.POST['item_id'] == city:
                     curCity = models.City.objects.get(cityName=city)
-            print(request.POST['item_id'])
         if 'search' in request.POST:
 
             #Session is a way of storing values to pass from one function to another. This avoids the problem of the script continually executing
@@ -49,6 +48,7 @@ def index(request):
 
     if request.user.is_superuser:
         return redirect('/admin')
+
     elif request.user.is_authenticated():
         curUserPK = request.user.pk
         curUser = models.UserInfo.objects.get(user_id=curUserPK)
@@ -67,6 +67,8 @@ def index(request):
             "malls": curCity.mallsLink
         }
 
+        curCityName = curCity.cityName
+
         # Based on the user type, this dictates what is displayed and what is not in this order:
         # 0. restaurants, 1. colleges, 2. libraries, 3. industries, 4. hotels, 5. parks, 6. zoos, 7. museums, 8. malls
         if curUserType == 'Student':
@@ -79,6 +81,7 @@ def index(request):
 
 
         context = {
+            "curCityName": curCityName,
             "toDiscplay": toDisplay,
             "links": links,
             "toDisplay": toDisplay,
