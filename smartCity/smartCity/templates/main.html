@@ -43,18 +43,6 @@
 				</ul>
 			{% endif %}
 
-
-				<!--Here is the dropbox that will need tidying up-->
-		<form method="POST">{% csrf_token %}
-			<select name="item_id" onchange="this.form.submit()">
-				{% for entry in dropdownItems %}
-
-					<option {% if entry == curCityName %} selected="selected" {% endif %} value="{{ entry }}">{{ entry }}</option>
-				{% endfor %}
-			</select>
-		</form>
-
-
 	<header role="banner" id="fh5co-header">
 			<div class="container">
 				<!-- <div class="row"> -->
@@ -80,17 +68,30 @@
 								<i class="icon-search"></i>
 						</div>
 					</div>
+
+					<div class="navbar-left">
+						<div class=" navbar-text">
+						<form method="POST">{% csrf_token %}
+								<select name="item_id" onchange="this.form.submit()">
+								{% for entry in dropdownItems %}
+									<option {% if entry == curCityName %} selected="selected" {% endif %} value="{{ entry }}">{{ entry }}</option>
+								{% endfor %}
+								</select>
+						</form>
+						</div>
+					</div>
+
 					<div class="navbar-right navbar-brand">
 						<div class="col-lg-offset-12 text-center">
 							<ul class="social social-circle">
-								<li><a href="../../accounts/logout"><i class="icon-logout"></i></li>
+								<li><a href="../../accounts/logout"><i class="icon-logout"></i></a></li>
 							</ul>
 						</div>
 					</div>
-					<div class="navbar-right">
+					<div class="navbar-right navbar-text">
 						<div class="col-lg-offset-8 text-center">
 							<ul class="social social-box">
-								<li>Logout {{ firstName }}?</li></a>
+								<li>{{ firstName }}?</li>
 							</ul>
 						</div>
 					</div>
