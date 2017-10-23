@@ -31,7 +31,7 @@ def searchResults(request):
     return render(request, 'searchResults.html', {"found": False})
 
 def index(request):
-    curCity = models.City.objects.get(pk=2)
+    curCity = models.City.objects.get(pk=1)
 
     #This section of code checks for a post method and then saves the search term to be used in the serach results page
     if request.POST:
