@@ -1,15 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Results</title>
 
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{% static "welcome/css/animate.css" %}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{% static "welcome/css/icomoon.css" %}">
+	<!-- Simple Line Icons -->
+	<link rel="stylesheet" href="{% static "welcome/css/simple-line-icons.css" %}">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="{% static "welcome/css/magnific-popup.css" %}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{% static "welcome/css/bootstrap.css" %}">
+
+	<link rel="stylesheet" href="{% static "welcome/css/style.css" %}">
+	<!-- Modernizr JS -->
+	<script src="{% static "welcome/js/modernizr-2.6.2.min.js" %}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+
+
+	<script src="{% static "welcome/js/respond.min.js" %}"></script>
+	<!--[endif]-->
 
 </head>
 <body>
 
 {% load static %}
-
+<section id="fh5co-work" data-section="work">
+		<div class="container">
+			<br/>
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">Result</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 subtext to-animate">
+							<h3>The Information of the City</h3>
+						</div>
+					</div>
+				</div>
+			</div>
     {% if searchTerm == 'college' or searchTerm == 'colleges' %}
     <div name="college" class="row row-bottom-padded-sm">
         <div class="col-md-4 col-sm-6 col-xxs-12">
@@ -131,6 +170,32 @@
         {% endif %}
 
     </div>
+            </div>
+		</div>
+	</section>
+
+    <!-- jQuery -->
+	<script src="{% static "welcome/js/jquery.min.js" %}"></script>
+	<!-- jQuery Easing -->
+	<script src="{% static "welcome/js/jquery.easing.1.3.js" %}"></script>
+	<!-- Bootstrap -->
+	<script src="{% static "welcome/js/bootstrap.min.js" %}"></script>
+	<!-- Waypoints -->
+	<script src="{% static "welcome/js/jquery.waypoints.min.js" %}"></script>
+	<!-- Stellar Parallax -->
+	<script src="{% static "welcome/js/jquery.stellar.min.js" %}"></script>
+	<!-- Counter -->
+	<script src="{% static "welcome/js/jquery.countTo.js" %}"></script>
+	<!-- Magnific Popup -->
+	<script src="{% static "welcome/js/jquery.magnific-popup.min.js" %}"></script>
+	<script src="{% static "welcome/js/magnific-popup-options.js" %}"></script>
+	<!-- Google Map -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
+	<script src="{% static "welcome/js/google_map.js" %}"></script>
+
+
+	<!-- Main JS (Do not remove) -->
+	<script src="{% static "welcome/js/main.js" %}"></script>
 
 </body>
 </html>
