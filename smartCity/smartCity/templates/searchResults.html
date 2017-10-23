@@ -51,15 +51,17 @@
 			</div>
 
             <!--no result found-->
+            {% if not found %}
             <div class="row">
 				<div class="col-md-12 section-heading text-center">
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 subtext to-animate">
-							<h3>The Result No Found....</h3>
+							<h3>No results found</h3>
 						</div>
 					</div>
 				</div>
 			</div>
+            {% endif %}
 
     {% if searchTerm == 'college' or searchTerm == 'colleges' %}
     <div name="college" class="row row-bottom-padded-sm">

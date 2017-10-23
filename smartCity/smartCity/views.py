@@ -23,11 +23,12 @@ def searchResults(request):
 
             context = {
                 "links": request.session['links'],
+                "found": True,
                 "searchTerm": word,
             }
 
             return render(request, 'searchResults.html', context)
-    return HttpResponse("<html><body>No results</body></html>")
+    return render(request, 'searchResults.html', {"found": False})
 
 def index(request):
     curCity = models.City.objects.get(pk=2)
@@ -54,7 +55,6 @@ def index(request):
         curUserPK = request.user.pk
         curUser = models.UserInfo.objects.get(user_id=curUserPK)
         curUserType = curUser.userTypeID.typeName
-        firstName = request.user.first_name
         dropdownItems = models.City.objects.all().values_list('cityName', flat=True)
         links = {
             "restaurants": curCity.restaurantsLink,
@@ -86,7 +86,6 @@ def index(request):
             "toDiscplay": toDisplay,
             "links": links,
             "toDisplay": toDisplay,
-            "firstName": firstName,
             "dropdownItems": dropdownItems
         }
 
