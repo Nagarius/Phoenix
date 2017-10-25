@@ -55,6 +55,7 @@ def index(request):
         curUserPK = request.user.pk
         curUser = models.UserInfo.objects.get(user_id=curUserPK)
         curUserType = curUser.userTypeID.typeName
+        curUserName = request.user.first_name
         dropdownItems = models.City.objects.all().values_list('cityName', flat=True)
         links = {
             "restaurants": curCity.restaurantsLink,
@@ -82,6 +83,7 @@ def index(request):
 
 
         context = {
+            "curUserName": curUserName,
             "curCityName": curCityName,
             "toDiscplay": toDisplay,
             "links": links,
