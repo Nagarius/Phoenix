@@ -139,14 +139,6 @@ body{
 	outline: none;
 }
 
-.forgot-password {
-  padding-left: 40px;
-  font-family: 'Exo', sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 1px;
-}
-
 ::-webkit-input-placeholder{
    color: rgba(255,255,255,0.6);
 }
@@ -166,11 +158,8 @@ body{
 		<br>
 		<form action="" method="POST"><div class="login">{% csrf_token %}
 			{{ form }}
-				<!--<input type="text" placeholder="username" name="user"><br>-->
-				<!--<input type="password" placeholder="password" name="password"><br>-->
-				<input type="submit" value="Login">
-				<p class="forgot-password"><a href="index.html">Forgot your password?</a></p>
-			</div></form>
+			<input type="submit" value="Login">
+		</div></form>
 
 </body>
 </html>

@@ -73,11 +73,11 @@ def index(request):
         # Based on the user type, this dictates what is displayed and what is not in this order:
         # 0. restaurants, 1. colleges, 2. libraries, 3. industries, 4. hotels, 5. parks, 6. zoos, 7. museums, 8. malls
         if curUserType == 'Student':
-            toDisplay = [0, 1, 1, 0, 0, 0, 0, 0, 0]
+            toDisplay = [1, 1, 1, 0, 0, 1, 1, 1, 1]
         elif curUserType == 'Businessman':
-            toDisplay = [0, 0, 0, 1, 1, 0, 0, 0, 0]
+            toDisplay = [1, 0, 0, 1, 1, 1, 1, 1, 1]
         elif curUserType == 'Tourist':
-            toDisplay = [0, 0, 0, 0, 1, 0, 0, 0, 0]
+            toDisplay = [1, 0, 0, 0, 1, 1, 1, 1, 1]
 
 
 
