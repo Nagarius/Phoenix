@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'smart_city',
         'USER': 'root',
         'PASSWORD': 'password123',
-        'HOST': '114.72.101.147',   # Or an IP Address that your DB is hosted on
+        'HOST': '49.176.104.200',   # Or an IP Address that your DB is hosted on
     }
 }
 
