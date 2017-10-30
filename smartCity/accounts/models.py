@@ -31,6 +31,8 @@ class City(models.Model):
     zoosLink = models.URLField(default="")
     museumsLink = models.URLField(default="")
     mallsLink = models.URLField(default="")
+    longitude = models.DecimalField(max_digits=10, decimal_places=4)
+    latitude = models.DecimalField(max_digits=10, decimal_places=4)
 
 
     def __str__(self):

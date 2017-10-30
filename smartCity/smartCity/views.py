@@ -31,7 +31,18 @@ def searchResults(request):
     return render(request, 'searchResults.html', {"found": False})
 
 def searchPage(request):
-    return render(request, 'search.html', {})
+
+    curCityLongitude = models.City.objects.get(cityName=request.session['curCity']).longitude
+    curCityLatitude = models.City.objects.get(cityName=request.session['curCity']).latitude
+
+
+    context = {
+        "curCityLongitude": curCityLongitude,
+        "curCityLatitude": curCityLatitude
+    }
+
+
+    return render(request, 'search.html', context)
 
 def index(request):
     curCity = models.City.objects.get(pk=1)
@@ -73,6 +84,7 @@ def index(request):
         }
         request.session['links'] = links
         curCityName = curCity.cityName
+        request.session['curCity'] = curCityName
 
         # Based on the user type, this dictates what is displayed and what is not in this order:
         # 0. restaurants, 1. colleges, 2. libraries, 3. industries, 4. hotels, 5. parks, 6. zoos, 7. museums, 8. malls
