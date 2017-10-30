@@ -30,6 +30,9 @@ def searchResults(request):
             return render(request, 'searchResults.html', context)
     return render(request, 'searchResults.html', {"found": False})
 
+def searchPage(request):
+    return render(request, 'search.html', {})
+
 def index(request):
     curCity = models.City.objects.get(pk=1)
 
@@ -39,13 +42,13 @@ def index(request):
             for city in models.City.objects.all().values_list('cityName', flat=True):
                 if request.POST['item_id'] == city:
                     curCity = models.City.objects.get(cityName=city)
-        if 'search' in request.POST:
-
-            #Session is a way of storing values to pass from one function to another. This avoids the problem of the script continually executing
-            #and overriding values that we wish to store
-
-            request.session['searchTerm'] = request.POST['search']
-            return redirect('/results')
+        # if 'search' in request.POST:
+        #
+        #     #Session is a way of storing values to pass from one function to another. This avoids the problem of the script continually executing
+        #     #and overriding values that we wish to store
+        #
+        #     request.session['searchTerm'] = request.POST['search']
+        #     return redirect('/results')
 
 
     if request.user.is_superuser:
