@@ -54,7 +54,7 @@
 					</a>
 
 					<div class="navbar-left">
-						<div class=" navbar-text">
+						<div class=" navbar-form">
 						<form method="POST">{% csrf_token %}
 								<select class="form-control" id="sel1" name="item_id" onchange="this.form.submit()">
 								{% for entry in dropdownItems %}
