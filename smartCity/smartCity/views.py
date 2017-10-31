@@ -8,28 +8,6 @@ import re
 
 searchTerm = ''
 
-def searchResults(request):
-
-    # Perhaps it would be better to check the search against a dictionary here before passing it to render. That way,
-    # can determine what to render and have another page for a fail or something.
-    searchTerm = request.session['searchTerm']
-
-    possibleSearches = ['colleges', 'college', 'libraries', 'library', 'industries', 'industry', 'hotels', 'hotel', 'parks', 'park', 'zoos', 'zoo',
-                        'museums', 'museum', 'restaurants', 'restaurant', 'malls', 'mall']
-
-
-    for word in possibleSearches:
-        if word in str.lower(searchTerm):
-
-            context = {
-                "links": request.session['links'],
-                "found": True,
-                "searchTerm": word,
-            }
-
-            return render(request, 'searchResults.html', context)
-    return render(request, 'searchResults.html', {"found": False})
-
 def searchPage(request):
 
     curCityLongitude = models.City.objects.get(cityName=request.session['curCity']).longitude
