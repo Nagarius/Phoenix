@@ -56,7 +56,7 @@
 					<div class="navbar-left">
 						<div class=" navbar-text">
 						<form method="POST">{% csrf_token %}
-								<select name="item_id" onchange="this.form.submit()">
+								<select class="form-control" id="sel1" name="item_id" onchange="this.form.submit()">
 								{% for entry in dropdownItems %}
 									<option {% if entry == curCityName %} selected="selected" {% endif %} value="{{ entry }}">{{ entry }}</option>
 								{% endfor %}
