@@ -1,0 +1,21 @@
+#!/bin/bash
+# This script pulls updated site, replaces dated version, restores settings
+# and restarts apache.
+
+cd smartCity/smartCity
+sudo mv settings.py settings.bak
+cd ../../smartCity/Phoenix-Team_No.63
+git pull
+echo -n "Git pulled, overwriting."
+cd smartCity/
+echo -n "."
+sudo cp -r * ../../
+echo -n "."
+cd ../../smartCity
+echo "."
+sudo mv settings.bak settings.py
+echo "Done! Restarting apache..."
+sudo service apache2 restart
+echo "Process complete! Have a lovely day!"
+
+
