@@ -2,24 +2,26 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpRequest
 from django.conf.urls import url
 from accounts import models
-import re
 
-# Create your views here.
 
-searchTerm = ''
 
+# This function renders the search page and passes in coordinates for the JavaScript Google API.
 def searchPage(request):
+
+    # Here we create two variables to contain the longitude and latitude.
+    # The 'curCity' is stored in Django's default session framework.
+    # We retrieve this object and then access its longitude and latitude attributes.
 
     curCityLongitude = models.City.objects.get(cityName=request.session['curCity']).longitude
     curCityLatitude = models.City.objects.get(cityName=request.session['curCity']).latitude
 
-
+    # Here is a dictionary containing references to the aforementioned variables.
     context = {
         "curCityLongitude": curCityLongitude,
         "curCityLatitude": curCityLatitude
     }
 
-
+    # This is where the context is passed in and rendered.
     return render(request, 'search.html', context)
 
 def index(request):
@@ -36,7 +38,6 @@ def index(request):
             #Session is a way of storing values to pass from one function to another. This avoids the problem of the script continually executing
             #and overriding values that we wish to store
 
-            request.session['searchTerm'] = request.POST['search']
             return redirect('/results')
 
 
