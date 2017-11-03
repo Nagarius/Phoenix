@@ -45,11 +45,22 @@ def index(request):
         return redirect('/admin')
 
     elif request.user.is_authenticated():
+        # Get the current users primary key
         curUserPK = request.user.pk
+
+        # Use that primary key to get the users associated UserInfo object
         curUser = models.UserInfo.objects.get(user_id=curUserPK)
+
+        # Get the user type from the UserInfo object
         curUserType = curUser.userTypeID.typeName
+
+        # Get the first name of the user
         curUserName = request.user.first_name
+
+        # Store all of the city names in a list
         dropdownItems = models.City.objects.all().values_list('cityName', flat=True)
+
+        # Save all the links stored in the current city object to a dictionary variable.
         links = {
             "restaurants": curCity.restaurantsLink,
             "colleges": curCity.collegesLink,
@@ -61,8 +72,14 @@ def index(request):
             "museums": curCity.museumsLink,
             "malls": curCity.mallsLink
         }
+
+        # Store the links to the built in Django session framework for later reference
         request.session['links'] = links
+
+        # Store the city name
         curCityName = curCity.cityName
+
+        # Store the city name in Django session framework for later reference
         request.session['curCity'] = curCityName
 
         # Based on the user type, this dictates what is displayed and what is not in this order:
@@ -75,7 +92,7 @@ def index(request):
             toDisplay = [1, 0, 0, 0, 1, 1, 1, 1, 1]
 
 
-
+        # To pass in to the render function and build the appropriate HTML
         context = {
             "curUserName": curUserName,
             "curCityName": curCityName,
